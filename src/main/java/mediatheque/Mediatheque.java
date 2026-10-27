@@ -28,5 +28,9 @@ public class Mediatheque {
 	public void printOnlyCDs() {
 		throw new UnsupportedOperationException("Not supported yet."); 
 	}
-
+public void accept(Visitor v) {
+    for (Item i : items) {
+        i.accept(v);
+    }
+}
 }
